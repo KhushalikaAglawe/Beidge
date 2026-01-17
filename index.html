@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Bridge</title>
+    <link rel="stylesheet" href="/frontend/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Bridge</div>
+        <div class="nav-links">
+            <a href="/dashboard" class="active">Dashboard</a>
+            <a href="/about">About</a>
+            <a href="/">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="question" placeholder="Ask your database anything...">
+            <button id="submitBtn">Execute</button>
+        </div>
+
+        <div id="loader" class="hidden" style="text-align: center; margin-top: 20px; color: var(--primary);">⚡ Processing your request...</div>
+
+        <div id="responseContainer" class="hidden" style="margin-top: 30px;">
+            <div class="card">
+                <h3>Reasoning Step</h3>
+                <ul id="logicalPlan" style="color: var(--dark); padding-left: 20px;"></ul>
+            </div>
+            
+            <div class="card">
+                <h3>Generated SQL</h3>
+                <pre id="generatedSql" style="background: var(--dark); color: #38bdf8; padding: 20px; border-radius: 12px; font-family: monospace; overflow-x: auto;"></pre>
+            </div>
+
+            <div class="card">
+                <button id="downloadCsv" class="btn-csv">Download CSV</button>
+                <h3>Data Results</h3>
+                <div id="tableWrapper" class="table-container" style="margin-top: 20px;"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/frontend/app.js"></script>
+</body>
+</html>
