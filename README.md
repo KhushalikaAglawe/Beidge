@@ -1,15 +1,11 @@
-# OnTopic.ai: NL2SQL Database Explorer
+🚀 LingoSQL: Natural Language SQL Assistant
+LingoSQL is an intelligent interface that bridges the gap between human language and relational databases. It allows users to query complex datasets like the Chinook Music Database and Student Performance Records using plain English. The system automatically generates, validates, and executes SQL queries in real-time.
 
-A FastAPI-based application that translates Natural Language (English) into SQL queries to interact with the **Chinook** and **Student** databases.
+🌟 Key Features
+NL-to-SQL Translation: Converts natural language prompts into executable MySQL queries.
 
-## 🚀 Getting Started
+Dual-Database Support: Seamlessly handles both the standard Chinook schema and custom students tables.
 
-### 1. Prerequisites
-* Python 3.9+
-* MySQL Server (with Chinook database loaded)
-* Virtual Environment (venv)
+Live Data Rendering: Displays query results in a clean, responsive web-based table.
 
-### 2. Installation
-Install the required dependencies using the virtual environment's pip:
-```bash
-./venv/bin/python3 -m pip install fastapi uvicorn jinja2 aiofiles mysql-connector-python
+SQL Validation: Includes a validation layer to ensure only safe and correct SQL is executed.
